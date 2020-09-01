@@ -151,6 +151,68 @@ The `InnerText` method should return:
 
 >The phrase regular expressions (and consequently, regexes) is often used to mean the specific, standard textual syntax for representing patterns that matching text need to conform to.
 
+
+
+
+
+
+
+## Software Engineering
+
+### Exercise 1
+
+What is meant by “knowledge acquisition is not sequential”? Provide a concrete example of knowledge acquisition that illustrates this.
+
+
+
+### Exercise 2
+
+Specify which of the following decisions were made during requirements or system design:
+- “The ticket distributor is composed of a user interface subsystem, a subsystem for computing tariff, and a
+network subsystem managing communication with the central computer.”
+- “The ticket distributor will use PowerPC processor chips.”
+- “The ticket distributor provides the traveler with an on-line help.”
+
+
+### Exercise 3
+
+In the following description, explain when the term account is used as an application domain concept and when as a solution domain concept:
+> "Assume you are developing an online system for managing bank accounts for mobile customers. A major design issue is how to provide access to the accounts when the customer cannot establish an online connection. One proposal is that accounts are made available on the mobile computer, even if the server is not up. In this case, the accounts show the amounts from the last connected session."
+
+
+
+### Exercise 4
+
+A passenger aircraft is composed of several millions of individual parts and requires thousands of persons to assemble. A four-lane highway bridge is another example of complexity. The first version of Word for Windows, a word processor released by Microsoft in November 1989, required 55 person-years, resulted into 249,000 lines of source code, and was delivered 4 years late. Aircraft and highway bridges are usually delivered on time and below budget, whereas software is often not. Discuss what are, in your opinion, the differences between developing an aircraft, a bridge, and a word processor, which would cause this situation.
+
+
+
+### Exercise 5
+
+1. Consider your watch (or the watch of a friend of yours that you can inspect) as a system and set the time 2 minutes ahead. Write down each interaction between you and the watch __as a scenario__. Record all interactions, including any feedback the watch provides you.
+1. Consider the scenario you just wrote.
+    - Identify the actor of the scenario.
+    - Next, write the corresponding __use case__ SetTime.
+1. Assume the watch system you described in point 1 and 2 also supports an alarm feature. Describe setting the alarm time as a self-contained __use case__ named SetAlarmTime.
+1. Examine the SetTime and SetAlarmTime use cases you wrote in point 2 and 3. Eliminate any redundancy by using an __include relationship__.
+1. Why an include relationship is preferable to an extend relationship in point 4?
+
+
+
+### Exercise 6
+
+The need for developing a complete specification may encourage an analyst to write detailed and lengthy documents. Which competing quality of specification (see Table 4-1 of the OOSE book) may encourage an analyst to keep the specification short?
+
+
+
+### Exercise 7
+
+Maintaining traceability during requirements and subsequent activities is expensive, because of the addition information that must be captured and maintained. What are the benefits of traceability that outweigh this overhead?  Mention at least 2 points you would consider.
+
+
+
+
+
 ## Submitting the assignment
 
 To submit the assignment you need to create a .pdf document using LaTeX containing the answers to the questions and a link to a public repository containing your fork of the completed code.
