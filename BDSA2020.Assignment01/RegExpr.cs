@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BDSA2019.Assignment01
 {
-    
+    //test kommentar
     public static class RegExpr
     {
         public static IEnumerable<string> SplitLine(IEnumerable<string> lines)
