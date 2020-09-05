@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace BDSA2019.Assignment01
+namespace BDSA2020.Assignment01
 {
     public static class Iterators
     {
