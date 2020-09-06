@@ -7,22 +7,21 @@ namespace BDSA2020.Assignment01
     //test kommentar
     public static class RegExpr
     {
-        public static string wordRegex = "\\s+";
+        public static string pattern = "[a-zA-Z0-9]+";
 
         public static IEnumerable<string> SplitLine(IEnumerable<string> lines)
         {
             foreach (var line in lines)
             {
-                var words = Regex.Split(line, wordRegex);
-
+                var words = Regex.Matches(line, pattern);
+            
                 foreach (var word in words)
                 {
-                    yield return word;
+                    yield return word.ToString();
                 }
             }
-
-
         }
+
 
         public static IEnumerable<(int width, int height)> Resolution(string resolutions)
         {
