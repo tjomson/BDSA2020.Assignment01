@@ -7,9 +7,8 @@ namespace BDSA2020.Assignment01
     //test kommentar
     public static class RegExpr
     {
-        public static string wordRegex = "[a-zA-Z0-9]*";
+        public static string wordRegex = "\\s+";
 
-        //TODO not working
         public static IEnumerable<string> SplitLine(IEnumerable<string> lines)
         {
             foreach (var line in lines)
