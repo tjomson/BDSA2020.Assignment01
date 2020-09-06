@@ -31,10 +31,6 @@ namespace BDSA2020.Assignment01.Tests
             var counter = 0;
             foreach (var result in actual)
             {
-                if (counter == 4)
-                {
-                    Console.WriteLine("bruh");
-                }
                 Assert.Equal(expected[counter], result.width);
                 Assert.Equal(expected[counter + 1], result.height);
                 counter += 2;

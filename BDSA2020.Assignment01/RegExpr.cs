@@ -25,12 +25,14 @@ namespace BDSA2020.Assignment01
         public static IEnumerable<(int width, int height)> Resolution(string resolutions)
         {
             //TODO only runs once, needs to loop.
-            var result = Regex.Match(resolutions, resolutionRegex);
+            var result = Regex.Matches(resolutions, resolutionRegex);
 
-             var width = Int32.Parse(result.Groups["width"].Value);
-             var height = Int32.Parse(result.Groups["height"].Value);
-             
-            yield return (width, height);
+            foreach (Match match in result)
+            {
+                var width = Int32.Parse(match.Groups["width"].Value);
+                var height = Int32.Parse(match.Groups["height"].Value);
+                yield return (width, height);
+            }
 
         }
 
