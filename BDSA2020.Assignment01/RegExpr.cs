@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace BDSA2020.Assignment01
 {
@@ -24,7 +25,6 @@ namespace BDSA2020.Assignment01
         public static string resolutionRegex = "(?<width>\\d+)[x](?<height>\\d+)";
         public static IEnumerable<(int width, int height)> Resolution(string resolutions)
         {
-            //TODO only runs once, needs to loop.
             var result = Regex.Matches(resolutions, resolutionRegex);
 
             foreach (Match match in result)
@@ -36,9 +36,22 @@ namespace BDSA2020.Assignment01
 
         }
 
+       
+//      <(a)\b[^>]*>(?<result>.*?)<\/\1> regex101
         public static IEnumerable<string> InnerText(string html, string tag)
         {
-            throw new NotImplementedException();
+
+            string regex = $@"<({tag})\b[^>]*>(?<result>.*?)<\/\1>"; 
+            //string regex = $".*";
+            var rrrrrr = Regex.Matches(html, regex);
+
+            foreach (Match match in rrrrrr)
+            { //not nested tags
+                Console.WriteLine(match.Groups["result"].Value);
+               
+                yield return match.Groups["result"].Value;
+            }
+
         }
 
     }
