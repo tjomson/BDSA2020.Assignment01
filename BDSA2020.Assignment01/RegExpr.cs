@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Diagnostics;
 
 namespace BDSA2020.Assignment01
 {
@@ -36,22 +35,16 @@ namespace BDSA2020.Assignment01
 
         }
 
-       
-//      <(a)\b[^>]*>(?<result>.*?)<\/\1> regex101
         public static IEnumerable<string> InnerText(string html, string tag)
         {
-
-            string regex = $@"<({tag})\b[^>]*>(?<result>.*?)<\/\1>"; 
+            string regex = $@"<({tag})>(?<result>.*?)<\/\1>";
             string replacePattern = "<.*?>";
-            var rrrrrr = Regex.Matches(html, regex);
+            var matches = Regex.Matches(html, regex);
 
-            foreach (Match match in rrrrrr)
-            { //not nested tags
-                Console.WriteLine(match.Groups["result"].Value);
-               
+            foreach (Match match in matches)
+            { 
                 var result = match.Groups["result"].Value;
                 yield return Regex.Replace(result, replacePattern, "");
-
             
             }
 
