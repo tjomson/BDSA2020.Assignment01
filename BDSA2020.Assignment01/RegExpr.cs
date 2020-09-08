@@ -42,14 +42,17 @@ namespace BDSA2020.Assignment01
         {
 
             string regex = $@"<({tag})\b[^>]*>(?<result>.*?)<\/\1>"; 
-            //string regex = $".*";
+            string replacePattern = "<.*?>";
             var rrrrrr = Regex.Matches(html, regex);
 
             foreach (Match match in rrrrrr)
             { //not nested tags
                 Console.WriteLine(match.Groups["result"].Value);
                
-                yield return match.Groups["result"].Value;
+                var result = match.Groups["result"].Value;
+                yield return Regex.Replace(result, replacePattern, "");
+
+            
             }
 
         }
